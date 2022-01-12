@@ -1,4 +1,4 @@
-package com.example.vsetury
+package com.entin.vsetury
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

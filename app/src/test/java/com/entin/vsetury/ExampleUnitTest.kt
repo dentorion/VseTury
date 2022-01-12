@@ -1,4 +1,4 @@
-package com.example.vsetury
+package com.entin.vsetury
 
 import org.junit.Test
 
