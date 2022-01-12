@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VseTury">
         <activity
-            android:name="com.entin.vsetury.MainActivity"
+            android:name="com.entin.vsetury.presentation.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
