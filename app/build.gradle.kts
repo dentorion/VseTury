@@ -58,6 +58,7 @@ android {
 dependencies {
 
     implementation(project(mapOf("path" to ":room")))
+    implementation(project(mapOf("path" to ":firebase")))
 
     // Main dependencies of project
     Dependencies.base.apply {
@@ -116,8 +117,6 @@ dependencies {
         implementation(analytics)
         implementation(auth)
         implementation(playServicesAuth)
-        implementation(firestore)
-        implementation(coroutinesPlayServices)
     }
 
     // Timber
