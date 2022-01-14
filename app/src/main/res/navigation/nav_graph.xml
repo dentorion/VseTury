@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.entin.presentation.screens.main.MainScreenFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_listScreenFragment"
+            app:destination="@id/listScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listScreenFragment"
+        android:name="com.entin.presentation.screens.list.ListScreenFragment"
+        android:label="ListScreenFragment" >
+        <action
+            android:id="@+id/action_listScreenFragment_to_detailScreenFragment"
+            app:destination="@id/detailScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailScreenFragment"
+        android:name="com.entin.presentation.screens.detail.DetailScreenFragment"
+        android:label="DetailScreenFragment" >
+        <action
+            android:id="@+id/action_detailScreenFragment_to_infoScreenFragment"
+            app:destination="@id/infoScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreenFragment"
+        android:name="com.entin.presentation.screens.info.InfoScreenFragment"
+        android:label="InfoScreenFragment" />
+</navigation>

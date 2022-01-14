@@ -10,5 +10,7 @@ java {
 }
 
 dependencies {
-
+    Dependencies.coroutines.apply {
+        api(androidCoroutines)
+    }
 }
