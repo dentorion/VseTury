@@ -18,6 +18,8 @@ android {
 
 dependencies {
 
+    implementation(project(mapOf("path" to ":data")))
+
     // Hilt
     Dependencies.hilt.apply {
         implementation(mainHilt)

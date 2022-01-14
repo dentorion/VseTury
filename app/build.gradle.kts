@@ -57,8 +57,11 @@ android {
 
 dependencies {
 
-    implementation(project(mapOf("path" to ":room")))
+    implementation(project(mapOf("path" to ":domain")))
+    implementation(project(mapOf("path" to ":data")))
+
     implementation(project(mapOf("path" to ":firebase")))
+    implementation(project(mapOf("path" to ":room")))
 
     // Main dependencies of project
     Dependencies.base.apply {

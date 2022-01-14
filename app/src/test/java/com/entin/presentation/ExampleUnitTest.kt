@@ -1,4 +1,4 @@
-package com.entin.vsetury
+package com.entin.presentation
 
 import org.junit.Test
 

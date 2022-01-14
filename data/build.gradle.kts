@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -17,18 +18,11 @@ android {
 
 dependencies {
 
-    implementation(project(mapOf("path" to ":data")))
+    implementation(project(mapOf("path" to ":domain")))
 
     // Hilt
     Dependencies.hilt.apply {
         implementation(mainHilt)
         kapt(compileAndroid)
-    }
-
-    // Firebase
-    Dependencies.firebase.apply {
-        implementation(platform(bom))
-        implementation(firestore)
-        implementation(coroutinesPlayServices)
     }
 }
