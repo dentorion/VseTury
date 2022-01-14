@@ -19,4 +19,9 @@ object Room {
      */
     const val compiler = "androidx.room:room-compiler:${Versions.room}"
 
+    /**
+     * To use Kotlin annotation processing tool (kapt)
+     */
+    const val annotation = "androidx.room:room-compiler:${Versions.room}"
+
 }

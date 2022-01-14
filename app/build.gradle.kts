@@ -57,6 +57,8 @@ android {
 
 dependencies {
 
+    implementation(project(mapOf("path" to ":room")))
+
     // Main dependencies of project
     Dependencies.base.apply {
         implementation(coreKtx)

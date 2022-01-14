@@ -7,3 +7,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "VseTury"
 include (":app")
+include(":room")
