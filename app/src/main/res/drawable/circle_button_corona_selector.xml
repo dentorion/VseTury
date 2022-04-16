@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/sunset">
+    <item>
+        <selector>
+            <!--  When pressed -->
+            <item
+                android:drawable="@drawable/main_circle_button_corona_pressed_background"
+                android:state_pressed="true" />
+            <!--  By default -->
+            <item android:drawable="@drawable/main_circle_button_corona_default_background" />
+        </selector>
+    </item>
+</ripple>

@@ -3,6 +3,7 @@ object Versions {
     /**
      * Base 
      */
+    const val core = "1.7.0"
     const val coreKtx = "1.7.0"
     const val appcompat = "1.4.0"
     const val material = "1.4.0"
@@ -66,7 +67,7 @@ object Versions {
      * Coroutines
      */
     const val coreCoroutines = "1.5.1"
-    const val androidCoroutines = "1.5.2"
+    const val androidCoroutines = "1.3.9"
 
     /**
      * Data Store
@@ -87,4 +88,19 @@ object Versions {
      * Connection
      */
     const val oops = "2.0.0"
+
+    /**
+     * ViewPager 2
+     */
+    const val viewPager = "1.0.0"
+
+    /**
+     * Canary Leak
+     */
+    const val canary = "2.8.1"
+
+    /**
+     * Splash screen
+     */
+    const val splashScreen = "1.0.0-beta01"
 }

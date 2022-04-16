@@ -6,32 +6,108 @@
     app:startDestination="@id/mainFragment">
 
     <fragment
+        android:id="@+id/webScreenFragment"
+        android:name="com.entin.presentation.screens.web.WebScreenFragment"
+        android:label="WebScreenFragment"
+        tools:layout="@layout/web_fragment"></fragment>
+
+    <fragment
         android:id="@+id/mainFragment"
         android:name="com.entin.presentation.screens.main.MainScreenFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_listScreenFragment"
-            app:destination="@id/listScreenFragment" />
+            app:destination="@id/listScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_webScreenFragment"
+            app:destination="@id/webScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_articleScreenFragment"
+            app:destination="@id/articleScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
     </fragment>
     <fragment
         android:id="@+id/listScreenFragment"
         android:name="com.entin.presentation.screens.list.ListScreenFragment"
-        android:label="ListScreenFragment" >
+        android:label="ListScreenFragment"
+        tools:layout="@layout/list_fragment">
         <action
             android:id="@+id/action_listScreenFragment_to_detailScreenFragment"
-            app:destination="@id/detailScreenFragment" />
+            app:destination="@id/detailScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_listScreenFragment_to_infoDetailScreenFragment"
+            app:destination="@id/articleScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
     </fragment>
     <fragment
         android:id="@+id/detailScreenFragment"
         android:name="com.entin.presentation.screens.detail.DetailScreenFragment"
-        android:label="DetailScreenFragment" >
+        android:label="DetailScreenFragment"
+        tools:layout="@layout/detail_fragment">
         <action
-            android:id="@+id/action_detailScreenFragment_to_infoScreenFragment"
-            app:destination="@id/infoScreenFragment" />
+            android:id="@+id/action_detailScreenFragment_to_companyScreenFragment"
+            app:destination="@id/companyScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_detailScreenFragment_to_listScreenFragment"
+            app:destination="@id/listScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
     </fragment>
     <fragment
-        android:id="@+id/infoScreenFragment"
-        android:name="com.entin.presentation.screens.info.InfoScreenFragment"
-        android:label="InfoScreenFragment" />
+        android:id="@+id/companyScreenFragment"
+        android:name="com.entin.presentation.screens.company.CompanyScreenFragment"
+        android:label="company_fragment"
+        tools:layout="@layout/company_fragment" />
+    <fragment
+        android:id="@+id/articleScreenFragment"
+        android:name="com.entin.presentation.screens.article.ArticleScreenFragment"
+        android:label="article_fragment"
+        tools:layout="@layout/article_fragment">
+        <action
+            android:id="@+id/action_infoDetailScreenFragment_to_listScreenFragment"
+            app:destination="@id/listScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_infoDetailScreenFragment_to_detailScreenFragment"
+            app:destination="@id/detailScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_infoDetailScreenFragment_to_webScreenFragment"
+            app:destination="@id/webScreenFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
 </navigation>

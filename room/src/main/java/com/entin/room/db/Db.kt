@@ -2,12 +2,14 @@ package com.entin.room.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.entin.room.db.converter.Converters
 import com.entin.room.db.dao.ToursDAO
-import com.entin.room.db.entity.TourRoomModel
+import com.entin.room.db.entity.FavouriteTourRoomModel
 
-//TODO: change entity class name entities = [TourRoomModel::class]
 
-@Database(entities = [TourRoomModel::class], version = 1, exportSchema = false)
+@Database(entities = [FavouriteTourRoomModel::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class Db : RoomDatabase() {
 
     abstract fun newsDao(): ToursDAO

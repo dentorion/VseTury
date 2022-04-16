@@ -10,7 +10,11 @@ java {
 }
 
 dependencies {
+    // Coroutines
     Dependencies.coroutines.apply {
         api(androidCoroutines)
     }
+
+    // @Inject
+    implementation("javax.inject:javax.inject:1")
 }

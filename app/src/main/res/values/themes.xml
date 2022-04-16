@@ -1,16 +1,78 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Theme.VseTury" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.VseTury" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/dark_milk</item>
+        <item name="colorPrimaryVariant">@color/sunset</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/dark_milk</item>
+        <item name="colorSecondaryVariant">@color/sunset</item>
+        <item name="colorOnSecondary">@color/citySpinnerBackground</item>
         <!-- Customize your theme here. -->
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
+
+    <!-- Logo -->
+    <style name="Theme.VseTury.Logo">
+        <item name="android:layout_width">222dp</item>
+        <item name="android:layout_height">111dp</item>
+        <item name="android:src">@drawable/ic_logo</item>
+    </style>
+
+    <!-- Labels on Main -->
+    <style name="Theme.VseTury.LabelMain" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/milk</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Theme.VseTury.LabelBlack" parent="Theme.VseTury.LabelMain">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Search button on Main -->
+    <style name="Theme.VseTury.SearchButton">
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/milk</item>
+        <item name="android:letterSpacing">0.082</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:background">@drawable/main_search_btn_background</item>
+    </style>
+
+    <!-- Circle button on Main -->
+    <style name="Theme.VseTury.MainCircleButton">
+        <item name="android:width">@dimen/main_icon_on_circle</item>
+        <item name="android:height">@dimen/main_icon_on_circle</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Date text on Main -->
+    <style name="Theme.VseTury.Date">
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/sunset</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@drawable/main_search_city_spinner_background</item>
+        <item name="android:fontFamily">@font/roboto_condensed_bold_italic</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">150dp</item>
+    </style>
+
+    <!-- Label error on List -->
+    <style name="Theme.VseTury.LabelList" parent="Theme.VseTury.LabelMain" />
+
 </resources>

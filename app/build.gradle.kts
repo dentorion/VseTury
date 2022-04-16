@@ -118,8 +118,8 @@ dependencies {
         implementation(platform(bom))
         implementation(crashlytics)
         implementation(analytics)
-        implementation(auth)
-        implementation(playServicesAuth)
+//        implementation(auth)
+//        implementation(playServicesAuth)
     }
 
     // Timber
@@ -127,9 +127,29 @@ dependencies {
         implementation(timber)
     }
 
+    // ViewPager 2
+    Dependencies.viewPager.apply {
+        implementation(viewPager)
+    }
+
     // No INTERNET Connection
     Dependencies.connection.apply {
         implementation(oops)
+    }
+
+    // Glide
+    Dependencies.glide.apply {
+        implementation(glide)
+    }
+
+    // Leak Canary
+    Dependencies.leakCanary.apply {
+        debugImplementation(canary)
+    }
+
+    // Splash screen
+    Dependencies.splashScreen.apply {
+        implementation(splashScreen)
     }
 }
 

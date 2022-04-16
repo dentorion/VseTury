@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">VseTury</string>
+
+    <string name="error_try_again_later">Try again later</string>
+    <string name="try_again">Пробовать снова</string>
+
+    <string name="main_label_plan_trip">Планируете поездку?</string>
+    <string name="main_label_show_date">Укажите даты</string>
+    <string name="main_search_btn_text">ПОИСК ТУРОВ</string>
+    <string name="main_search_tire">⼀</string>
+
+    <string name="list_label_search">Поиск туров из %1$s в %2$s</string>
+    <string name="list_label_city_from">Все туры из города %1$s</string>
+    <string name="list_label_city_to">Все туры в  %1$s</string>
+    <string name="list_label_favourite">Ваши избранные туры\nСмахните для удаления из списка</string>
+    <string name="list_label_upcoming">Ближайшие туры</string>
+    <string name="list_label_info_articles">Полезные статьи</string>
+
+    <string name="list_label_oops_common">Поиск не дал результатов\nПоищем другие туры?</string>
+    <string name="list_label_oops_favourite">Вы еще не добавили ни один тур в список избранных</string>
+    <string name="list_label_oops_upcoming">В ближайшее время туры отсутствуют</string>
+    <string name="list_label_oops_info_articles">Интересные статьи не найдены</string>
+
+    <string name="list_label_oops_button_common">Новый поиск</string>
+    <string name="list_label_oops_button_favourite">Начать поиск</string>
+    <string name="list_label_oops_button_info_articles">Поищем туры?</string>
+
+    <string name="list_favourite_delete">Тур более не в избранном</string>
+    <string name="list_favourite_add">Тур сохранен в избранном</string>
+
+    <string name="detail_label_through">через</string>
+    <string name="detail_label_contact_person">Контактное лицо</string>
+    <string name="detail_label_description">описание тура</string>
+    <string name="detail_action_button_title_error">Действуй!</string>
+    <string name="detail_action_button_title_search_tour_by_id">Страница тура</string>
+    <string name="detail_action_button_title_search_tour_by_city_from">Список туров</string>
+    <string name="detail_action_button_title_tour_by_city_to">Список туров</string>
+    <string name="detail_action_button_title_web_open">Открыть страницу</string>
+
+    <string name="common_label_zl">zl</string>
+    <string name="common_empty_description">описание отсутствует</string>
+    <string name="content_description_flag">Флаг</string>
+    <string name="content_description_search_btn">Кнопка поиска</string>
+    <string name="content_description_logo">логотип</string>
+    <string name="content_description_slider_item">Элемент слайдера</string>
+    <string name="content_description_list_oops_man">Уупс картинка</string>
+    <string name="content_description_info_item_image">TODO</string>
+
+    <string name="no_network_connection">Отсутствует Интернет-подключение</string>
+    <string name="no_network_connection_check_try">Проверьте связь и попробуйте снова</string>
+    <string name="no_network_turn_on">Пожалуйста включите</string>
+    <string name="no_network_wifi">Wifi</string>
+    <string name="no_network_mobile_data">Сеть</string>
+    <string name="no_network_msg_airplane">Включен Авиа режим</string>
+    <string name="no_network_turn_off">Пожалуйста отключите</string>
+    <string name="no_network_airplane">Авиа режим</string>
 </resources>

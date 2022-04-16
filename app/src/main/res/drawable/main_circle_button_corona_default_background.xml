@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="62dp"
+        android:height="62dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/black" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/main_icon_on_circle"
+        android:height="@dimen/main_icon_on_circle"
+        android:drawable="@drawable/ic_corona"
+        android:gravity="center" />
+</layer-list>

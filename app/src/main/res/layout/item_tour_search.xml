@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:layout_marginVertical="8dp">
+
+    <ImageView
+        android:id="@+id/item_main_background"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/item_tour_search_background_rectangle"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/item_orange_block"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_for_item_search"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toBottomOf="@+id/item_main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_main_background" />
+
+    <ImageView
+        android:id="@+id/item_half_circle_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/decoration_half_circle_up"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_orange_block" />
+
+    <ImageView
+        android:id="@+id/item_half_circle_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/decoration_half_circle_down"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintStart_toEndOf="@+id/item_orange_block"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_circle1"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_circle2"
+        app:layout_constraintEnd_toEndOf="@+id/item_half_circle_up"
+        app:layout_constraintStart_toStartOf="@+id/item_half_circle_up"
+        app:layout_constraintTop_toBottomOf="@+id/item_half_circle_up"
+        app:srcCompat="@drawable/decoration_red_full_circle_" />
+
+    <ImageView
+        android:id="@+id/item_circle2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_circle3"
+        app:layout_constraintStart_toStartOf="@+id/item_circle1"
+        app:layout_constraintTop_toBottomOf="@+id/item_circle1"
+        app:srcCompat="@drawable/decoration_red_full_circle_" />
+
+    <ImageView
+        android:id="@+id/item_circle3"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_circle4"
+        app:layout_constraintStart_toStartOf="@+id/item_circle2"
+        app:layout_constraintTop_toBottomOf="@+id/item_circle2"
+        app:srcCompat="@drawable/decoration_red_full_circle_" />
+
+    <ImageView
+        android:id="@+id/item_circle4"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_circle5"
+        app:layout_constraintStart_toStartOf="@+id/item_circle3"
+        app:layout_constraintTop_toBottomOf="@+id/item_circle3"
+        app:srcCompat="@drawable/decoration_red_full_circle_" />
+
+    <ImageView
+        android:id="@+id/item_circle5"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_half_circle_down"
+        app:layout_constraintStart_toStartOf="@+id/item_circle4"
+        app:layout_constraintTop_toBottomOf="@+id/item_circle4"
+        app:srcCompat="@drawable/decoration_red_full_circle_" />
+
+    <ImageView
+        android:id="@+id/item_bus_icon"
+        android:layout_width="50dp"
+        android:layout_height="33dp"
+        android:contentDescription="@string/common_empty_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_date_to"
+        app:layout_constraintEnd_toEndOf="@+id/item_orange_block"
+        app:layout_constraintStart_toStartOf="@+id/item_orange_block"
+        app:layout_constraintTop_toBottomOf="@+id/item_date_from"
+        app:srcCompat="@drawable/ic_bus" />
+
+    <TextView
+        android:id="@+id/item_city_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/rectangle_for_item_search"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:textAllCaps="true"
+        android:textColor="@color/milk"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/item_circle1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ВРОЦЛАВ" />
+
+    <TextView
+        android:id="@+id/item_city_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_for_item_search"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:textAllCaps="true"
+        android:textColor="@color/milk"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_city_from"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_city_from"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="ПАРИЖ" />
+
+    <TextView
+        android:id="@+id/item_date_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/milk"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/item_orange_block"
+        app:layout_constraintStart_toStartOf="@+id/item_orange_block"
+        app:layout_constraintTop_toTopOf="@+id/item_orange_block"
+        tools:text="12.02.22" />
+
+    <TextView
+        android:id="@+id/item_date_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/milk"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/item_orange_block"
+        app:layout_constraintEnd_toEndOf="@+id/item_orange_block"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/item_orange_block"
+        tools:text="12.02.22" />
+
+    <TextView
+        android:id="@+id/item_title_tour"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="8dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/item_city_to"
+        app:layout_constraintStart_toStartOf="@+id/item_city_from"
+        app:layout_constraintTop_toBottomOf="@+id/item_city_from"
+        tools:text="Варшава - Гдыня - Вроцлав - Париж тур выходного дня" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

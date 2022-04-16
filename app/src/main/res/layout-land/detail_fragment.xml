@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".screens.detail.DetailScreenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detail_header"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/detail_yellow_background_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/detail_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/common_empty_description"
+
+            android:src="@drawable/detail_red_background_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_header"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="222dp"
+            android:layout_height="111dp"
+            android:contentDescription="@string/content_description_logo"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/detail_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/common_empty_description"
+            android:scaleType="fitStart"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/car_transparent_png"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <ImageView
+            android:id="@+id/detail_price_label"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/main_search_btn_background"
+            app:layout_constraintEnd_toStartOf="@+id/detail_heart_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_body"
+            app:layout_constraintTop_toBottomOf="@+id/detail_title"
+            app:tint="@color/lemon" />
+
+        <TextView
+            android:id="@+id/detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/sunset"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_price_label"
+            app:layout_constraintEnd_toStartOf="@+id/detail_zl_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_price_label"
+            app:layout_constraintTop_toTopOf="@+id/detail_price_label"
+            tools:text="410" />
+
+        <TextView
+            android:id="@+id/detail_zl_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/common_label_zl"
+            android:textAllCaps="false"
+            android:textColor="@color/sunset"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_price"
+            app:layout_constraintEnd_toStartOf="@+id/detail_price_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_price"
+            app:layout_constraintTop_toTopOf="@+id/detail_price" />
+
+        <ImageView
+            android:id="@+id/detail_heart_btn"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/main_search_btn_background"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_price_label"
+            app:layout_constraintEnd_toStartOf="@+id/detail_body"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_price_label"
+            app:layout_constraintTop_toTopOf="@+id/detail_price_label"
+            app:tint="@color/lemon" />
+
+        <ImageView
+            android:id="@+id/detail_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/common_empty_description"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_heart_btn"
+            app:layout_constraintEnd_toEndOf="@+id/detail_heart_btn"
+            app:layout_constraintStart_toStartOf="@+id/detail_heart_btn"
+            app:layout_constraintTop_toTopOf="@+id/detail_heart_btn" />
+
+        <TextView
+            android:id="@+id/detail_city_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/item_tour_search_background_rectangle"
+            android:backgroundTint="@color/black"
+            android:letterSpacing="0.1"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
+            android:textAllCaps="true"
+            android:textColor="@color/milk"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_arrow"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_arrow"
+            app:layout_constraintTop_toTopOf="@+id/detail_arrow"
+            tools:text="АМСТЕРДАМ" />
+
+        <TextView
+            android:id="@+id/detail_city_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_tour_search_background_rectangle"
+            android:backgroundTint="@color/black"
+            android:letterSpacing="0.1"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
+            android:textAllCaps="true"
+            android:textColor="@color/milk"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/detail_arrow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_bus"
+            tools:text="ЗЕЛЕНА ГУРА" />
+
+        <ImageView
+            android:id="@+id/detail_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_city_from"
+            app:layout_constraintEnd_toStartOf="@+id/detail_city_to"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_city_from"
+            app:layout_constraintTop_toTopOf="@+id/detail_city_from"
+            app:tint="@color/milk" />
+
+        <LinearLayout
+            android:id="@+id/detail_linear_dots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_label_through">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detail_label_through"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/detail_label_through"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_city_from"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/milk"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_car"
+            tools:text="Ахуенная поездочка в мировиндию с " />
+
+        <TextView
+            android:id="@+id/detail_contact_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/detail_label_contact_person"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_linear_dots" />
+
+        <TextView
+            android:id="@+id/detail_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false"
+            android:textColor="@color/milk"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_contact_phone"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_contact_phone"
+            app:layout_constraintTop_toTopOf="@+id/detail_contact_phone"
+            tools:text="Виталий" />
+
+        <TextView
+            android:id="@+id/detail_contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:textAllCaps="false"
+            android:textColor="@color/milk"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/detail_contact_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_contact_label"
+            tools:text="+48 123 984 755" />
+
+        <TextView
+            android:id="@+id/detail_tour_description_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/detail_label_description"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_contact_phone" />
+
+        <TextView
+            android:id="@+id/detail_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:paddingBottom="55dp"
+            android:textAllCaps="false"
+            android:textColor="@color/milk"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_tour_description_label"
+            tools:text="Ахуенная поездочка в мировиндию с гидом и фотографом. Ахуенная поездочка в мировиндию с гидом и фотографом \n Ахуенная поездочка в мировиндию с гидом и фотографом \n Ахуенная поездочка в мировиндию с гидом и фотографом" />
+
+        <ImageView
+            android:id="@+id/detail_bus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/ic_bus"
+            app:layout_constraintBottom_toBottomOf="@+id/dateFrom"
+            app:layout_constraintEnd_toStartOf="@+id/dateTo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dateFrom"
+            app:layout_constraintTop_toTopOf="@+id/dateFrom"
+            app:tint="@color/milk" />
+
+        <TextView
+            android:id="@+id/dateFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/milk"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/detail_bus"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_body"
+            app:layout_constraintTop_toBottomOf="@+id/detail_price_label"
+            tools:text="22 февраля" />
+
+        <TextView
+            android:id="@+id/dateTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/milk"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/dateFrom"
+            app:layout_constraintEnd_toStartOf="@+id/detail_body"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detail_bus"
+            app:layout_constraintTop_toTopOf="@+id/dateFrom"
+            tools:text="2 марта" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="25dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="25dp" />
+
+        <include layout="@layout/part_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

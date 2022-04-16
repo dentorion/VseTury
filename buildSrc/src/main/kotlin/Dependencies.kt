@@ -16,8 +16,11 @@ object Dependencies {
     val firebase = Firebase
     val timber = Timber
     val connection = Connection
+    val viewPager = ViewPager
+    val glide = Glide
+    val leakCanary = CanaryLeak
+    val splashScreen = SplashScreen
 
     val workManager = WorkManager
     val retrofit = Retrofit
-    val glide = Glide
 }

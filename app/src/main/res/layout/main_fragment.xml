@@ -1,13 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_background_france_1"
+    android:fillViewport="true"
+    android:nestedScrollingEnabled="true"
+    android:scrollbars="none"
+    app:layout_dodgeInsetEdges="bottom"
     tools:context=".screens.main.MainScreenFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="16dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/Theme.VseTury.Logo"
+            android:contentDescription="@string/content_description_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_label_plan_trip"
+            style="@style/Theme.VseTury.LabelMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/main_label_plan_trip"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <Spinner
+            android:id="@+id/main_spinner_city_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/main_search_city_spinner_background"
+            android:popupBackground="@drawable/main_search_city_spinner_background"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_label_plan_trip" />
+
+        <Spinner
+            android:id="@+id/main_spinner_city_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/main_search_city_spinner_background"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_spinner_city_from" />
+
+        <ImageView
+            android:id="@+id/main_spinner_from_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/main_spinner_city_from"
+            app:layout_constraintEnd_toEndOf="@+id/main_spinner_city_from"
+            app:layout_constraintTop_toTopOf="@+id/main_spinner_city_from" />
+
+        <ImageView
+            android:id="@+id/main_spinner_to_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/main_spinner_city_to"
+            app:layout_constraintEnd_toEndOf="@+id/main_spinner_city_to"
+            app:layout_constraintTop_toTopOf="@+id/main_spinner_city_to" />
+
+        <TextView
+            android:id="@+id/main_label_dates"
+            style="@style/Theme.VseTury.LabelMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/main_label_show_date"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_spinner_city_to" />
+
+        <TextView
+            android:id="@+id/main_date_to"
+            style="@style/Theme.VseTury.Date"
+            app:layout_constraintBottom_toBottomOf="@+id/main_date_from"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_date_from"
+            tools:text="12 апреля" />
+
+        <TextView
+            android:id="@+id/main_tire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_condensed_bold_italic"
+            android:text="@string/main_search_tire"
+            android:textAlignment="viewStart"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_date_from"
+            app:layout_constraintEnd_toStartOf="@+id/main_date_to"
+            app:layout_constraintStart_toEndOf="@+id/main_date_from"
+            app:layout_constraintTop_toTopOf="@+id/main_date_from" />
+
+        <TextView
+            android:id="@+id/main_date_from"
+            style="@style/Theme.VseTury.Date"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_label_dates"
+            tools:text="2 марта" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_search_btn"
+            style="@style/Theme.VseTury.SearchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/content_description_search_btn"
+            android:text="@string/main_search_btn_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_date_from" />
+
+        <ImageButton
+            android:id="@+id/main_circle_btn_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circle_button_star_selector"
+            android:contentDescription="@string/common_empty_description"
+            app:layout_constraintEnd_toStartOf="@+id/main_circle_btn_heart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_search_btn" />
+
+        <ImageButton
+            android:id="@+id/main_circle_btn_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button_heart_selector"
+            android:contentDescription="@string/common_empty_description"
+            app:layout_constraintEnd_toStartOf="@+id/main_circle_btn_bell"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/main_circle_btn_star"
+            app:layout_constraintTop_toTopOf="@+id/main_circle_btn_star" />
+
+        <ImageButton
+            android:id="@+id/main_circle_btn_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button_bell_selector"
+            android:contentDescription="@string/common_empty_description"
+            app:layout_constraintEnd_toStartOf="@+id/main_circle_btn_corona"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/main_circle_btn_heart"
+            app:layout_constraintTop_toTopOf="@+id/main_circle_btn_star" />
+
+        <ImageButton
+            android:id="@+id/main_circle_btn_corona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button_corona_selector"
+            android:contentDescription="@string/common_empty_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/main_circle_btn_bell"
+            app:layout_constraintTop_toTopOf="@+id/main_circle_btn_star" />
+
+        <LinearLayout
+            android:id="@+id/main_linear_dots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_circle_btn_star">
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/main_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_linear_dots" />
+
+        <include layout="@layout/part_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

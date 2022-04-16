@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_icon_on_circle">35dp</dimen>
+    <dimen name="main_icon_on_circle_right_margin">8dp</dimen>
+    <dimen name="main_icon_on_circle_top_margin">7dp</dimen>
+
+    <dimen name="main_slider_dots_size">8dp</dimen>
+    <dimen name="main_slider_dots_margin">12dp</dimen>
+
+    <dimen name="detail_cities_through_padding_left">12dp</dimen>
+    <dimen name="detail_cities_through_padding_top">5dp</dimen>
+    <dimen name="detail_cities_through_padding_right">12dp</dimen>
+    <dimen name="detail_cities_through_padding_bottom">5dp</dimen>
+</resources>

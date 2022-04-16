@@ -18,6 +18,7 @@ android {
 dependencies {
 
     implementation(project(mapOf("path" to ":data")))
+    implementation(project(mapOf("path" to ":domain")))
 
     // Hilt
     Dependencies.hilt.apply {

@@ -18,8 +18,6 @@ android {
 
 dependencies {
 
-    implementation(project(mapOf("path" to ":data")))
-
     // Hilt
     Dependencies.hilt.apply {
         implementation(mainHilt)
@@ -38,5 +36,10 @@ dependencies {
     Dependencies.coroutines.apply {
         api(coreCoroutines)
         api(androidCoroutines)
+    }
+
+    // Gson
+    Dependencies.gson.apply {
+        implementation(gson)
     }
 }

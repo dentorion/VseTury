@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/article_background_gradient"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".screens.article.ArticleScreenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="222dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/content_description_logo"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/info_fragment_back_white"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="-5dp"
+            android:background="@color/sunset"
+            android:contentDescription="@string/common_empty_description"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/info_fragment_slider"
+            app:layout_constraintEnd_toEndOf="@+id/info_fragment_slider"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/info_fragment_slider"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/info_fragment_slider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            tools:background="@color/dark_milk" />
+
+        <ImageView
+            android:id="@+id/item_info_slider_arrow_left"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="2dp"
+            android:contentDescription="@string/common_empty_description"
+            android:scaleX="-1"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/info_fragment_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:srcCompat="@drawable/slider_double_arrow_right"
+            app:tint="@color/sunset" />
+
+        <ImageView
+            android:id="@+id/item_info_slider_arrow_right"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="@string/common_empty_description"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/info_fragment_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/info_fragment_slider"
+            app:srcCompat="@drawable/slider_double_arrow_right"
+            app:tint="@color/sunset" />
+
+        <ImageView
+            android:id="@+id/detail_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/article_background_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_fragment_back_white" />
+
+        <TextView
+            android:id="@+id/info_fragment_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="6dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:textAllCaps="true"
+            android:textColor="@color/sunset_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_fragment_back_white"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/info_fragment_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="5sp"
+            android:paddingBottom="55dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/info_fragment_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/info_fragment_title"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:text="Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum." />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/sunset"
+            android:visibility="invisible"
+            app:icon="@drawable/slider_double_arrow_right"
+            app:layout_constraintStart_toStartOf="@+id/info_fragment_text"
+            app:layout_constraintTop_toBottomOf="@+id/info_fragment_title"
+            tools:text="Открыть тур" />
+
+        <include layout="@layout/part_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
