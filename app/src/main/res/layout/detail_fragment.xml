@@ -27,12 +27,13 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:contentDescription="@string/common_empty_description"
-
             android:src="@drawable/detail_red_background_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_header" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_header"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/logo"
@@ -68,7 +69,7 @@
             android:contentDescription="@string/common_empty_description"
             android:src="@drawable/main_search_btn_background"
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@+id/detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/dateFrom"
             app:tint="@color/lemon" />
 
         <TextView
@@ -129,7 +130,7 @@
             android:id="@+id/detail_city_from"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/item_tour_search_background_rectangle"
             android:backgroundTint="@color/black"
             android:letterSpacing="0.1"
@@ -429,25 +430,40 @@
             android:id="@+id/dateFrom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="2dp"
             android:fontFamily="@font/roboto_medium"
             android:textColor="@color/milk"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-            app:layout_constraintTop_toTopOf="@+id/detail_heart_btn"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/detail_title"
             tools:text="22 февраля" />
+
+        <ImageView
+            android:id="@+id/detail_arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/common_empty_description"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/dateFrom"
+            app:layout_constraintStart_toEndOf="@+id/dateFrom"
+            app:layout_constraintTop_toTopOf="@+id/dateFrom"
+            app:tint="@color/milk" />
 
         <TextView
             android:id="@+id/dateTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
             android:fontFamily="@font/roboto_medium"
             android:textColor="@color/milk"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_heart_btn"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintBottom_toBottomOf="@+id/dateFrom"
+            app:layout_constraintStart_toEndOf="@+id/detail_arrow2"
+            app:layout_constraintTop_toTopOf="@+id/dateFrom"
             tools:text="2 марта" />
 
         <androidx.constraintlayout.widget.Guideline

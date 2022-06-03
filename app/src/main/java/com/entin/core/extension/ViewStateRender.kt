@@ -59,7 +59,7 @@ fun <T> BaseFragment.renderResult(
 fun ViewGroup.recursiveLoopViewGroup(
     isVisible: Boolean,
 ) {
-    // Common elements for all fragments inherited from part_result layout
+    // Common elements for all fragments with part_result layout
     val listOfSupportViews = listOf(
         R.id.progress_status, R.id.list_oops_man, R.id.error_text_label, R.id.error_again_button,
     )
